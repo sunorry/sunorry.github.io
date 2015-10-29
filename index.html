@@ -100,7 +100,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑2-OC-C/" data-id="cigch46iq0000np3adm5dwmj9" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑2-OC-C/" data-id="cigch6xzt0001of3a3qs37j9b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小白鼠答疑系列/">小白鼠答疑系列</a></li></ul>
@@ -138,20 +138,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Atom.m<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">&lt;Foundation/Foundation.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">Atom</span> : <span class="title">NSObject</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">readonly</span>) <span class="built_in">NSUInteger</span> protons;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">readonly</span>) <span class="built_in">NSString</span> *chemicalElement;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSUInteger</span>) massNumber;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure></p>
-<p>类声明中添加了两个属性和一个实例方法。</p>
-<p>属性 <code>chemicalElement</code> 的类型为 NSString *(指向文本字符串的指针)，还拥有 readonly 属性。</p>
-<p>实例方法 <code>massNumber</code> 会返回一个非负整型值。</p>
-<p>Atom.h<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#import <span class="title">"Atom.h"</span></span></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">Atom</span></span></span><br><span class="line">- (<span class="keyword">id</span>) init &#123;</span><br><span class="line">    <span class="keyword">if</span> ((<span class="keyword">self</span> = [<span class="keyword">super</span> init])) &#123;</span><br><span class="line">        _chemicalElement = <span class="string">@"none"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">self</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="built_in">NSUInteger</span>) massNumber &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure></p>
-<p>在类接口中声明的所有<strong>方法</strong>都必须在类的实现文件中定义。</p>
-<p><code>massNumber</code> 是在 Atom 接口中声明的。为啥 <code>init</code> 也要在此处定义呢？</p>
-<p>因为 <code>init()</code> 方法是在 <code>NSObject</code> 类中声明的。</p>
-<p><code>NSObject</code> 类的 <code>init()</code> 方法用于在将内存分配给新对象后，立刻初始化该对象。</p>
-
+        <p>这篇不太好<br>
+        
+          <p class="article-more-link">
+            <a href="/2015/10/29/小白鼠答疑1-init/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑1-init/" data-id="cigb0rdx00000543alnkpmh7t" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑1-init/" data-id="cigch6xzx0006of3ag55evdh1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小白鼠答疑系列/">小白鼠答疑系列</a></li></ul>
@@ -198,7 +194,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/28/class-method-instance-method/" data-id="cigaindpf0000a53akdmhru44" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/28/class-method-instance-method/" data-id="cigch6xzz0009of3ayqg5pcx3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/知识点积累/">知识点积累</a></li></ul>
@@ -245,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/28/Learn-Objective-C/" data-id="cigah717e000axx3a09jqnstg" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/28/Learn-Objective-C/" data-id="cigch6y04000iof3asj9px5ty" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OC/">OC</a></li></ul>
@@ -293,7 +289,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/28/Point-in-C/" data-id="cigah717a0005xx3a2eer94by" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/28/Point-in-C/" data-id="cigch6y01000dof3a3uxbr7cv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C</a></li></ul>
@@ -341,7 +337,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/28/C-ARRAY/" data-id="cigah716f0000xx3ax2eo3zeg" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/28/C-ARRAY/" data-id="cigch6y0b000rof3a2zs9pp0h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C</a></li></ul>
@@ -390,7 +386,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/27/C语言复习/" data-id="cigah717h000gxx3aemhz8sez" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/27/C语言复习/" data-id="cigch6y08000oof3a56fij5r3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C</a></li></ul>
@@ -430,7 +426,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/26/Hello/" data-id="cigah717g000fxx3ajpmgf2j6" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/26/Hello/" data-id="cigch6y06000nof3a842t7pr0" class="article-share-link">Share</a>
       
       
     </footer>
