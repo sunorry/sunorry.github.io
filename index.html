@@ -65,6 +65,100 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-小白鼠答疑5-预处理命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/02/小白鼠答疑5-预处理命令/" class="article-date">
+  <time datetime="2015-11-02T03:27:00.000Z" itemprop="datePublished">2015-11-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/OC/">OC</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/02/小白鼠答疑5-预处理命令/">小白鼠答疑5 - 预处理命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="预处理命令">预处理命令</h2><p>C、C++、Obective 代码文件都要两步才能完成编译。首先，<strong>预处理器(preprocessor) </strong>会读入并处理整个文件。接着，预处理器的输出结果会作为输入交给真正的编译器。</p>
+<p>预处理器都是以 # 开头，常用的有 #include, #import, #define。</p>
+<h3 id="#include_与_#import">#include 与 #import</h3><p>他两的作用相似：都是先要求预处理器读取某个文件，然后将读入的内容添加至输出结果。通常情况下，会使用这两个指令来导入声明文件（.h 文件），使编译器能够根据导入的声明顺序地拜年呀相应的文件。</p>
+<h4 id="差别">差别</h4><p><code>#import</code> 保证处理器只导入特定文件一次。<code>#include</code> 则循序多次导入同一个文件。C程序员偏向 include, OC 偏向 import。</p>
+<h4 id="双引号与尖括号">双引号与尖括号</h4><p>导入文件时，文件名需加入 引号或尖括号。</p>
+<ul>
+<li>双引号：编译器先在项目目录下查找相应文件</li>
+<li>尖括号：先在预先设定好的标准目录下查找相应的文件。</li>
+</ul>
+<h3 id="#define">#define</h3><p>它告诉预处理器：在编译器看到 A 之前，使用 B 替换之。<br><figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">define</span> <span class="title">M_PI</span> 3.14</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑5-预处理命令/" data-id="cighdynbl0035k23a0lyqodu6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-小白鼠答疑4-Collection" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/02/小白鼠答疑4-Collection/" class="article-date">
+  <time datetime="2015-11-02T03:08:00.000Z" itemprop="datePublished">2015-11-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/OC/">OC</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/02/小白鼠答疑4-Collection/">小白鼠答疑4 - Collection类</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="NSArray/NSMutableArray">NSArray/NSMutableArray</h2><p>创建 <code>NSArray</code> 实例时，需要一次性设置好所有要保存的对象。<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *color = [<span class="built_in">NSArray</span> arrayWithObjects:<span class="string">@"Orange"</span>, <span class="string">@"red"</span>, <span class="literal">nil</span>];</span><br></pre></td></tr></table></figure></p>
+<p><code>nil</code> 实参必须写，以便让该方法知道要加入对象的个数，新版本是写 count。</p>
+<p>不可修改的对象(NSArray)永远无须拷贝。对于可修改对象，则可能要复制一份私有拷贝，以保证程序中的其他代码无法修改对象所保存的内容。不可修改对象则没有这样的顾虑。</p>
+<p>也就是说，NSArray 的 copy 不会做额外的工作，仅仅返回本身的指针。 NSMutableArray 的 copy 则会制作一份自己的拷贝，并返回指向新数组对象的指针。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑4-Collection/" data-id="cighd9zat0013k23abhfd6wvk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-小白鼠答疑-修饰符" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/11/01/小白鼠答疑-修饰符/" class="article-date">
@@ -83,7 +177,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/01/小白鼠答疑-修饰符/">小白鼠答疑 - 修饰符</a>
+      <a class="article-title" href="/2015/11/01/小白鼠答疑-修饰符/">小白鼠答疑3 - 修饰符</a>
     </h1>
   
 
@@ -102,7 +196,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/01/小白鼠答疑-修饰符/" data-id="cighd3zqu00coqq3aikqoy2r1" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/11/01/小白鼠答疑-修饰符/" data-id="cighd581g0009k23a7iybfwfx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -147,7 +241,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/31/对象消息/" data-id="cigesix6u0000qq3aiq9yxufd" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/31/对象消息/" data-id="cighd581h000bk23a046lycjd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OC/">OC</a></li></ul>
@@ -194,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑2-OC-C/" data-id="cigbpp453002i543aqpaoqz29" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑2-OC-C/" data-id="cighd58190001k23asjes88vt" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小白鼠答疑系列/">小白鼠答疑系列</a></li></ul>
@@ -241,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑1-init/" data-id="cigb0rdx00000543alnkpmh7t" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑1-init/" data-id="cighd581e0006k23ayyn3a5tk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小白鼠答疑系列/">小白鼠答疑系列</a></li></ul>
@@ -288,7 +382,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/28/class-method-instance-method/" data-id="cigaindpf0000a53akdmhru44" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/28/class-method-instance-method/" data-id="cighd581j000fk23a8tvb0m43" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/知识点积累/">知识点积累</a></li></ul>
@@ -335,7 +429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/28/Learn-Objective-C/" data-id="cigah717e000axx3a09jqnstg" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/28/Learn-Objective-C/" data-id="cighd581o000ok23aeg6e7jts" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OC/">OC</a></li></ul>
@@ -383,7 +477,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/28/Point-in-C/" data-id="cigah717a0005xx3a2eer94by" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/28/Point-in-C/" data-id="cighd581l000jk23amj9f9l02" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C</a></li></ul>
@@ -431,7 +525,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/28/C-ARRAY/" data-id="cigah716f0000xx3ax2eo3zeg" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/28/C-ARRAY/" data-id="cighd581x000wk23ah9g66zul" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C</a></li></ul>
@@ -443,93 +537,10 @@
 
 
   
-    <article id="post-C语言复习" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/27/C语言复习/" class="article-date">
-  <time datetime="2015-10-27T13:28:00.000Z" itemprop="datePublished">2015-10-27</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/C/">C</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/27/C语言复习/">C语言复习</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://cocoadevcentral.com/articles/000081.php">原文链接</a></p>
-<p>学习<code>Objective-C</code>中顺便复习下C语言。</p>
-<p>文件后缀形式 .c 。</p>
-        
-          <p class="article-more-link">
-            <a href="/2015/10/27/C语言复习/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/27/C语言复习/" data-id="cigah717h000gxx3aemhz8sez" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Hello" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/26/Hello/" class="article-date">
-  <time datetime="2015-10-26T09:09:39.000Z" itemprop="datePublished">2015-10-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/26/Hello/">Hello</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这是我的新博客。</p>
-<p>之前的文章全部删除，一是域名过期，二是内容没什么使用价值。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/26/Hello/" data-id="cigah717g000fxx3ajpmgf2j6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </section>
         
@@ -539,7 +550,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OC/">OC</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OC/">OC</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -566,7 +577,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -578,7 +589,15 @@
       <ul>
         
           <li>
-            <a href="/2015/11/01/小白鼠答疑-修饰符/">小白鼠答疑 - 修饰符</a>
+            <a href="/2015/11/02/小白鼠答疑5-预处理命令/">小白鼠答疑5 - 预处理命令</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/02/小白鼠答疑4-Collection/">小白鼠答疑4 - Collection类</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/01/小白鼠答疑-修饰符/">小白鼠答疑3 - 修饰符</a>
           </li>
         
           <li>
@@ -587,14 +606,6 @@
         
           <li>
             <a href="/2015/10/29/小白鼠答疑2-OC-C/">小白鼠答疑2 - OC &amp; C</a>
-          </li>
-        
-          <li>
-            <a href="/2015/10/29/小白鼠答疑1-init/">小白鼠答疑1 - init</a>
-          </li>
-        
-          <li>
-            <a href="/2015/10/28/class-method-instance-method/">+(class method) &amp; -(instance method)</a>
           </li>
         
       </ul>
