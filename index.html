@@ -65,6 +65,93 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-load-vs-DOMContentLoaded" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/16/load-vs-DOMContentLoaded/" class="article-date">
+  <time datetime="2015-11-16T06:33:00.000Z" itemprop="datePublished">2015-11-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/16/load-vs-DOMContentLoaded/">load vs DOMContentLoaded</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="DOMContentLoaded">DOMContentLoaded</h2><p>The DOMContentLoaded event is fired when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading. </p>
+<h2 id="load">load</h2><p>A very different event - load - should be used only to detect a fully-loaded page.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sunorry.github.io/2015/11/16/load-vs-DOMContentLoaded/" data-id="cih1kscad0000b53a8sp79pjo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-小白鼠答疑6-回调" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/02/小白鼠答疑6-回调/" class="article-date">
+  <time datetime="2015-11-02T06:13:00.000Z" itemprop="datePublished">2015-11-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/OC/">OC</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/02/小白鼠答疑6-回调/">小白鼠答疑6 - 回调</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><code>NSRunLoop</code>这个类专门等待事件的发生，包括鼠标移动、触摸时间、时钟触发和网络活动等。</p>
+<p><code>NSRunLoop</code>实例会在特定的事件放生时，触发<strong>回调（callback）</strong>，OC 中有三种途径可以实现回调（以下 X 代表特定事件）。</p>
+<ul>
+<li>目标-动作（Target-action）：在应用开始等待前， 要求『当 x 发生时，向指定的对象发送某个特定消息』。接收消息的对象是<strong>目标（target）</strong>，消息的选择器（selector）是动作<strong>（action）</strong></li>
+<li>辅助对象（Helper objects）：在应用开始等待前，要求『当 x 发生时，向遵守相应协议的辅助对象发送消息』。<strong>委托对象（delegate）</strong>和<strong>数据源（data source）</strong>是常见的辅助对象。</li>
+<li>通告（Notification）：Apple 提供了一种称为<strong>通告中心（notification center）</strong>的对象。在应用开始等待前，可以告知通告中心『某个对象正在等待某些特定的通告，当通告出现，向指定对象发送特定消息』。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑6-回调/" data-id="cighjwmuw00161m3a0gr17a0x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-小白鼠答疑5-预处理命令" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/11/02/小白鼠答疑5-预处理命令/" class="article-date">
@@ -105,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑5-预处理命令/" data-id="cighdynbl0035k23a0lyqodu6" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑5-预处理命令/" data-id="cighjwgxr00011m3ast2c8zqy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -149,7 +236,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑4-Collection/" data-id="cighd9zat0013k23abhfd6wvk" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑4-Collection/" data-id="cighjwgy000041m3apxsivfab" class="article-share-link">Share</a>
       
       
     </footer>
@@ -196,7 +283,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/01/小白鼠答疑-修饰符/" data-id="cighd581g0009k23a7iybfwfx" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/11/01/小白鼠答疑-修饰符/" data-id="cighjwgy8000d1m3apw2dkzpt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -241,7 +328,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/31/对象消息/" data-id="cighd581h000bk23a046lycjd" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/31/对象消息/" data-id="cighjwgya000f1m3accxvhrl8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OC/">OC</a></li></ul>
@@ -288,7 +375,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑2-OC-C/" data-id="cighd58190001k23asjes88vt" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑2-OC-C/" data-id="cighjwgy300061m3axzag1bbd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小白鼠答疑系列/">小白鼠答疑系列</a></li></ul>
@@ -335,7 +422,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑1-init/" data-id="cighd581e0006k23ayyn3a5tk" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑1-init/" data-id="cighjwgy6000a1m3an5ykegvs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小白鼠答疑系列/">小白鼠答疑系列</a></li></ul>
@@ -382,7 +469,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/28/class-method-instance-method/" data-id="cighd581j000fk23a8tvb0m43" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/28/class-method-instance-method/" data-id="cighjwgyd000j1m3axvktk6no" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/知识点积累/">知识点积累</a></li></ul>
@@ -429,106 +516,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/28/Learn-Objective-C/" data-id="cighd581o000ok23aeg6e7jts" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/28/Learn-Objective-C/" data-id="cighjwgym000s1m3apfybfexg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OC/">OC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Point-in-C" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/28/Point-in-C/" class="article-date">
-  <time datetime="2015-10-27T16:24:00.000Z" itemprop="datePublished">2015-10-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/C/">C</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/28/Point-in-C/">Point in C</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://blog.jobbole.com/25409/">原文地址</a></p>
-<p>这只是个简单的记录，更过看原文。</p>
-        
-          <p class="article-more-link">
-            <a href="/2015/10/28/Point-in-C/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/28/Point-in-C/" data-id="cighd581l000jk23amj9f9l02" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-C-ARRAY" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/28/C-ARRAY/" class="article-date">
-  <time datetime="2015-10-27T16:05:00.000Z" itemprop="datePublished">2015-10-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/C/">C</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/28/C-ARRAY/">Memory and ARRAY in C</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://theocacao.com/document.page/231">原文链接</a></p>
-<h2 id="Basic_memory">Basic memory</h2><p>计算内存的单位是 <code>byte</code>。一个标准的 <code>int</code> 变量占用 4 个比特。</p>
-        
-          <p class="article-more-link">
-            <a href="/2015/10/28/C-ARRAY/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/28/C-ARRAY/" data-id="cighd581x000wk23ah9g66zul" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C</a></li></ul>
 
     </footer>
   </div>
@@ -550,7 +541,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OC/">OC</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OC/">OC</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -559,7 +550,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OC/">OC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小白鼠答疑系列/">小白鼠答疑系列</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/知识点积累/">知识点积累</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OC/">OC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小白鼠答疑系列/">小白鼠答疑系列</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/知识点积累/">知识点积累</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -568,7 +559,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/OC/" style="font-size: 15px;">OC</a> <a href="/tags/小白鼠答疑系列/" style="font-size: 15px;">小白鼠答疑系列</a> <a href="/tags/知识点积累/" style="font-size: 10px;">知识点积累</a>
+      <a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/OC/" style="font-size: 15px;">OC</a> <a href="/tags/小白鼠答疑系列/" style="font-size: 15px;">小白鼠答疑系列</a> <a href="/tags/知识点积累/" style="font-size: 10px;">知识点积累</a>
     </div>
   </div>
 
@@ -577,7 +568,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -589,6 +580,14 @@
       <ul>
         
           <li>
+            <a href="/2015/11/16/load-vs-DOMContentLoaded/">load vs DOMContentLoaded</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/02/小白鼠答疑6-回调/">小白鼠答疑6 - 回调</a>
+          </li>
+        
+          <li>
             <a href="/2015/11/02/小白鼠答疑5-预处理命令/">小白鼠答疑5 - 预处理命令</a>
           </li>
         
@@ -598,14 +597,6 @@
         
           <li>
             <a href="/2015/11/01/小白鼠答疑-修饰符/">小白鼠答疑3 - 修饰符</a>
-          </li>
-        
-          <li>
-            <a href="/2015/10/31/对象消息/">对象消息</a>
-          </li>
-        
-          <li>
-            <a href="/2015/10/29/小白鼠答疑2-OC-C/">小白鼠答疑2 - OC &amp; C</a>
           </li>
         
       </ul>
