@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | sunorry</title>
+  <title>项目总结-抓取键盘上的go | sunorry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="除了帅几乎一无所有的美男子">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sunorry">
-<meta property="og:url" content="http://sunorry.github.io/archives/page/2/index.html">
+  <meta name="description" content="客栈关键字搜索页面">
+<meta property="og:type" content="article">
+<meta property="og:title" content="项目总结-抓取键盘上的go">
+<meta property="og:url" content="http://sunorry.github.io/2015/11/30/项目总结-抓取键盘上的go/index.html">
 <meta property="og:site_name" content="sunorry">
-<meta property="og:description" content="除了帅几乎一无所有的美男子">
+<meta property="og:description" content="客栈关键字搜索页面">
+<meta property="og:updated_time" content="2015-11-30T03:49:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sunorry">
-<meta name="twitter:description" content="除了帅几乎一无所有的美男子">
+<meta name="twitter:title" content="项目总结-抓取键盘上的go">
+<meta name="twitter:description" content="客栈关键字搜索页面">
   
     <link rel="alternative" href="/atom.xml" title="sunorry" type="application/atom+xml">
   
@@ -63,172 +64,61 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/10/31/对象消息/" class="archive-article-date">
-  <time datetime="2015-10-31T07:51:00.000Z" itemprop="datePublished">Oct 31</time>
+        <section id="main"><article id="post-项目总结-抓取键盘上的go" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/30/项目总结-抓取键盘上的go/" class="article-date">
+  <time datetime="2015-11-30T03:45:00.000Z" itemprop="datePublished">2015-11-30</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/项目总结/">项目总结</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/31/对象消息/">对象消息</a>
+    <h1 class="article-title" itemprop="name">
+      项目总结-抓取键盘上的go
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/10/29/小白鼠答疑2-OC-C/" class="archive-article-date">
-  <time datetime="2015-10-29T04:09:00.000Z" itemprop="datePublished">Oct 29</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/29/小白鼠答疑2-OC-C/">小白鼠答疑2 - OC &amp; C</a>
-    </h1>
-  
+        <p>客栈关键字搜索页面<br><a id="more"></a></p>
+<p>点击键盘上的「搜索、go、」等键时，抓取这个事件。</p>
+<p>将上面的 <code>input</code> 标签写在 <code>form</code> 中。<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;form <span class="keyword">method</span>=<span class="string">"post"</span> id=<span class="string">"form"</span> action=<span class="string">"#"</span>&gt;</span><br><span class="line">&lt;input <span class="keyword">type</span>=<span class="string">"text"</span>&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">form</span>.onsubmit = <span class="function"><span class="keyword">function</span><span class="params">()</span></span> &#123;</span><br><span class="line">    var <span class="keyword">value</span> = self.doms.input.<span class="keyword">value</span>;        </span><br><span class="line">    <span class="keyword">return</span> false;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>搞定。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/10/29/小白鼠答疑1-init/" class="archive-article-date">
-  <time datetime="2015-10-28T16:31:00.000Z" itemprop="datePublished">Oct 29</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/29/小白鼠答疑1-init/">小白鼠答疑1 - init</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/10/28/Learn-Objective-C/" class="archive-article-date">
-  <time datetime="2015-10-28T01:47:00.000Z" itemprop="datePublished">Oct 28</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sunorry.github.io/2015/11/30/项目总结-抓取键盘上的go/" data-id="cihlf372n0001od3aje7plkv0" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/28/Learn-Objective-C/">Learn Objective-C</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/10/28/Point-in-C/" class="archive-article-date">
-  <time datetime="2015-10-27T16:24:00.000Z" itemprop="datePublished">Oct 28</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/28/Point-in-C/">Point in C</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/10/28/C-ARRAY/" class="archive-article-date">
-  <time datetime="2015-10-27T16:05:00.000Z" itemprop="datePublished">Oct 28</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/28/C-ARRAY/">Memory and ARRAY in C</a>
-    </h1>
   
+    <a href="/2015/11/30/项目总结-scrollHeight-offsetHeight/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">项目总结-scrollHeight &amp;&amp; offsetHeight</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/10/27/C语言复习/" class="archive-article-date">
-  <time datetime="2015-10-27T13:28:00.000Z" itemprop="datePublished">Oct 27</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/27/C语言复习/">C语言复习</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/10/26/Hello/" class="archive-article-date">
-  <time datetime="2015-10-26T09:09:39.000Z" itemprop="datePublished">Oct 26</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/26/Hello/">Hello</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 </section>
         
           <aside id="sidebar">
