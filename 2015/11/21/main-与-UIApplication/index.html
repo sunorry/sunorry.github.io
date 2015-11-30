@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives: 2015 | sunorry</title>
+  <title>main() 与 UIApplication | sunorry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="除了帅几乎一无所有的美男子">
-<meta property="og:type" content="website">
-<meta property="og:title" content="sunorry">
-<meta property="og:url" content="http://sunorry.github.io/archives/2015/index.html">
+  <meta name="description" content="12345int main(int argc, char *arv[]) &amp;#123;	@autoreleasepool &amp;#123;		return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));	&amp;#125;&amp;#125;
+UIApplicationMain 函数会创建一个 UIApplica">
+<meta property="og:type" content="article">
+<meta property="og:title" content="main() 与 UIApplication">
+<meta property="og:url" content="http://sunorry.github.io/2015/11/21/main-与-UIApplication/index.html">
 <meta property="og:site_name" content="sunorry">
-<meta property="og:description" content="除了帅几乎一无所有的美男子">
+<meta property="og:description" content="12345int main(int argc, char *arv[]) &amp;#123;	@autoreleasepool &amp;#123;		return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));	&amp;#125;&amp;#125;
+UIApplicationMain 函数会创建一个 UIApplica">
+<meta property="og:updated_time" content="2015-11-21T10:14:36.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sunorry">
-<meta name="twitter:description" content="除了帅几乎一无所有的美男子">
+<meta name="twitter:title" content="main() 与 UIApplication">
+<meta name="twitter:description" content="12345int main(int argc, char *arv[]) &amp;#123;	@autoreleasepool &amp;#123;		return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));	&amp;#125;&amp;#125;
+UIApplicationMain 函数会创建一个 UIApplica">
   
     <link rel="alternative" href="/atom.xml" title="sunorry" type="application/atom+xml">
   
@@ -63,210 +67,66 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/11/30/项目总结-scrollHeight-offsetHeight/" class="archive-article-date">
-  <time datetime="2015-11-30T03:13:00.000Z" itemprop="datePublished">Nov 30</time>
+        <section id="main"><article id="post-main-与-UIApplication" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/21/main-与-UIApplication/" class="article-date">
+  <time datetime="2015-11-21T09:59:38.000Z" itemprop="datePublished">2015-11-21</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/30/项目总结-scrollHeight-offsetHeight/">项目总结-scrollHeight &amp;&amp; offsetHeight</a>
+    <h1 class="article-title" itemprop="name">
+      main() 与 UIApplication
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/11/21/class-method-instance-method/" class="archive-article-date">
-  <time datetime="2015-11-21T14:57:51.000Z" itemprop="datePublished">Nov 21</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/21/class-method-instance-method/">class method &amp;&amp; instance method</a>
-    </h1>
-  
+        <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> *arv[]) &#123;</span><br><span class="line">	<span class="keyword">@autoreleasepool</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">UIApplicationMain</span>(argc, argv, <span class="literal">nil</span>, <span class="built_in">NSStringFromClass</span>([AppDelegate class]));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>UIApplicationMain</code> 函数会创建一个 <code>UIApplication</code> 对象。每个 iOS 应用都有且只有一个 <code>UIApplication</code> 对象，该对象的作用是维护运行循环。一旦程序创建了某个 <code>UIApplication</code> 对象，该对象的运行就会一直循环下去， <code>main()</code> 的执行也会因此阻塞。</p>
+<p>此外，<code>UIApplicationMain</code> 函数还会创建某个指定类的对象，并将其设置为 <code>UIApplication</code> 的 delegate。该对象的类是由 <code>UIApplicationMain</code> 函数的最后一个参数指定的，该参数的类型是 <code>NSString</code> 对象，代表的是某个类的类名。</p>
+<p>在应用启动运行循环并开始接受事件前，<code>UIApplication</code> 对象会向其委托发送一个特定的消息，使应用能有机会完成相应的初始化工作。这个消息的名称是 <code>application:didFinishLaunchingWithOptions:</code> 。</p>
+<p>每个 iOS 应用都有一个 <code>main（）</code> ，完成的都是相同的任务。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/11/21/main-与-UIApplication/" class="archive-article-date">
-  <time datetime="2015-11-21T09:59:38.000Z" itemprop="datePublished">Nov 21</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/21/main-与-UIApplication/">main() 与 UIApplication</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/11/16/Height-Width/" class="archive-article-date">
-  <time datetime="2015-11-16T08:19:00.000Z" itemprop="datePublished">Nov 16</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sunorry.github.io/2015/11/21/main-与-UIApplication/" data-id="cih8xby8h001fjf3auy82v532" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/16/Height-Width/">Height &amp;&amp; Width</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/11/16/load-vs-DOMContentLoaded/" class="archive-article-date">
-  <time datetime="2015-11-16T06:33:00.000Z" itemprop="datePublished">Nov 16</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/16/load-vs-DOMContentLoaded/">load vs DOMContentLoaded</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
-</article>
   
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/11/02/小白鼠答疑6-回调/" class="archive-article-date">
-  <time datetime="2015-11-02T06:13:00.000Z" itemprop="datePublished">Nov 2</time>
-</a>
-      
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/02/小白鼠答疑6-回调/">小白鼠答疑6 - 回调</a>
-    </h1>
+    <a href="/2015/11/21/class-method-instance-method/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          class method &amp;&amp; instance method
+        
+      </div>
+    </a>
   
+  
+    <a href="/2015/11/16/Height-Width/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Height &amp;&amp; Width</div>
+    </a>
+  
+</nav>
 
-    </header>
-  </div>
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/11/02/小白鼠答疑5-预处理命令/" class="archive-article-date">
-  <time datetime="2015-11-02T03:27:00.000Z" itemprop="datePublished">Nov 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/02/小白鼠答疑5-预处理命令/">小白鼠答疑5 - 预处理命令</a>
-    </h1>
-  
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/11/02/小白鼠答疑4-Collection/" class="archive-article-date">
-  <time datetime="2015-11-02T03:08:00.000Z" itemprop="datePublished">Nov 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/02/小白鼠答疑4-Collection/">小白鼠答疑4 - Collection类</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/11/01/小白鼠答疑-修饰符/" class="archive-article-date">
-  <time datetime="2015-11-01T15:07:00.000Z" itemprop="datePublished">Nov 1</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/01/小白鼠答疑-修饰符/">小白鼠答疑3 - 修饰符</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/10/31/对象消息/" class="archive-article-date">
-  <time datetime="2015-10-31T07:51:00.000Z" itemprop="datePublished">Oct 31</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/10/31/对象消息/">对象消息</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 </section>
         
           <aside id="sidebar">

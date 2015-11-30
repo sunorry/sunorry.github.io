@@ -65,6 +65,130 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-项目总结-scrollHeight-offsetHeight" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/30/项目总结-scrollHeight-offsetHeight/" class="article-date">
+  <time datetime="2015-11-30T03:13:00.000Z" itemprop="datePublished">2015-11-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/项目总结/">项目总结</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/30/项目总结-scrollHeight-offsetHeight/">项目总结-scrollHeight &amp;&amp; offsetHeight</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>bnbhybrid 的评论页面。<br>
+        
+          <p class="article-more-link">
+            <a href="/2015/11/30/项目总结-scrollHeight-offsetHeight/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sunorry.github.io/2015/11/30/项目总结-scrollHeight-offsetHeight/" data-id="cihleuuh90000n93az7kq4hj7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-class-method-instance-method" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/21/class-method-instance-method/" class="article-date">
+  <time datetime="2015-11-21T14:57:51.000Z" itemprop="datePublished">2015-11-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/21/class-method-instance-method/">class method &amp;&amp; instance method</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>类方法(class method): 作用通常是创建对象，或者获取类的某些全局属性。类方法不会作用在对象上，也不能存取实例变量。</p>
+<p>实例方法(instance method): 用来操作对象（对象有时也称为类的一个实例），例如存取方法都是实例方法，用来设置和获取对象的实例变量。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sunorry.github.io/2015/11/21/class-method-instance-method/" data-id="cih8xb3vf000ojf3aw4vhdcrt" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-main-与-UIApplication" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/11/21/main-与-UIApplication/" class="article-date">
+  <time datetime="2015-11-21T09:59:38.000Z" itemprop="datePublished">2015-11-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/21/main-与-UIApplication/">main() 与 UIApplication</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> *arv[]) &#123;</span><br><span class="line">	<span class="keyword">@autoreleasepool</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="built_in">UIApplicationMain</span>(argc, argv, <span class="literal">nil</span>, <span class="built_in">NSStringFromClass</span>([AppDelegate class]));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>UIApplicationMain</code> 函数会创建一个 <code>UIApplication</code> 对象。每个 iOS 应用都有且只有一个 <code>UIApplication</code> 对象，该对象的作用是维护运行循环。一旦程序创建了某个 <code>UIApplication</code> 对象，该对象的运行就会一直循环下去， <code>main()</code> 的执行也会因此阻塞。</p>
+<p>此外，<code>UIApplicationMain</code> 函数还会创建某个指定类的对象，并将其设置为 <code>UIApplication</code> 的 delegate。该对象的类是由 <code>UIApplicationMain</code> 函数的最后一个参数指定的，该参数的类型是 <code>NSString</code> 对象，代表的是某个类的类名。</p>
+<p>在应用启动运行循环并开始接受事件前，<code>UIApplication</code> 对象会向其委托发送一个特定的消息，使应用能有机会完成相应的初始化工作。这个消息的名称是 <code>application:didFinishLaunchingWithOptions:</code> 。</p>
+<p>每个 iOS 应用都有一个 <code>main（）</code> ，完成的都是相同的任务。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sunorry.github.io/2015/11/21/main-与-UIApplication/" data-id="cih8xby8h001fjf3auy82v532" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Height-Width" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/11/16/Height-Width/" class="article-date">
@@ -97,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/16/Height-Width/" data-id="cih6bqune00006z3a9uex8fmk" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/11/16/Height-Width/" data-id="cih8xb3vo0012jf3a5i0dlsyu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
@@ -137,7 +261,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/16/load-vs-DOMContentLoaded/" data-id="cih1pqict000le53awxp5wq6s" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/11/16/load-vs-DOMContentLoaded/" data-id="cih8xb3va000ljf3a4caumrnm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
@@ -186,7 +310,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑6-回调/" data-id="cih1pqicc0001e53a8kcslp38" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑6-回调/" data-id="cih8xb3up0001jf3ax75y4xl5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -236,7 +360,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑5-预处理命令/" data-id="cih1pqicg0004e53ax7yqkwl3" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑5-预处理命令/" data-id="cih8xb3uy0004jf3az3tzibby" class="article-share-link">Share</a>
       
       
     </footer>
@@ -280,7 +404,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑4-Collection/" data-id="cih1pqici0006e53an3q9xme3" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑4-Collection/" data-id="cih8xb3v10006jf3auzxm4nd1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -327,7 +451,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/01/小白鼠答疑-修饰符/" data-id="cih1pqicn000fe53agkbkracs" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/11/01/小白鼠答疑-修饰符/" data-id="cih8xb3v6000fjf3ax4gm4cr8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -372,151 +496,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/31/对象消息/" data-id="cih1pqicp000he53ai7tx6o58" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/10/31/对象消息/" data-id="cih8xb3v8000hjf3a84pwdbwi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OC/">OC</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-小白鼠答疑2-OC-C" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/29/小白鼠答疑2-OC-C/" class="article-date">
-  <time datetime="2015-10-29T04:09:00.000Z" itemprop="datePublished">2015-10-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/OC/">OC</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/29/小白鼠答疑2-OC-C/">小白鼠答疑2 - OC &amp; C</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本章内容总结于 《Objective-C编程》<br>
-        
-          <p class="article-more-link">
-            <a href="/2015/10/29/小白鼠答疑2-OC-C/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑2-OC-C/" data-id="cih1pqick0008e53amp1v3vlk" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小白鼠答疑系列/">小白鼠答疑系列</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-小白鼠答疑1-init" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/29/小白鼠答疑1-init/" class="article-date">
-  <time datetime="2015-10-28T16:31:00.000Z" itemprop="datePublished">2015-10-29</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/OC/">OC</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/29/小白鼠答疑1-init/">小白鼠答疑1 - init</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这篇不太好<br>
-        
-          <p class="article-more-link">
-            <a href="/2015/10/29/小白鼠答疑1-init/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/29/小白鼠答疑1-init/" data-id="cih1pqicm000ce53a0xq8jkgd" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小白鼠答疑系列/">小白鼠答疑系列</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-class-method-instance-method" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/28/class-method-instance-method/" class="article-date">
-  <time datetime="2015-10-28T08:04:00.000Z" itemprop="datePublished">2015-10-28</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/OC/">OC</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/10/28/class-method-instance-method/">+(class method) &amp; -(instance method)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://stackoverflow.com/questions/1053592/what-is-the-difference-between-class-and-instance-methods">原文链接</a></p>
-        
-          <p class="article-more-link">
-            <a href="/2015/10/28/class-method-instance-method/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/10/28/class-method-instance-method/" data-id="cih1pqicx000oe53ao1q55n03" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/知识点积累/">知识点积累</a></li></ul>
 
     </footer>
   </div>
@@ -538,7 +521,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OC/">OC</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OC/">OC</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目总结/">项目总结</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -547,7 +530,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OC/">OC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小白鼠答疑系列/">小白鼠答疑系列</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/知识点积累/">知识点积累</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JS/">JS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OC/">OC</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小白鼠答疑系列/">小白鼠答疑系列</a><span class="tag-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -556,7 +539,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/JS/" style="font-size: 15px;">JS</a> <a href="/tags/OC/" style="font-size: 15px;">OC</a> <a href="/tags/小白鼠答疑系列/" style="font-size: 15px;">小白鼠答疑系列</a> <a href="/tags/知识点积累/" style="font-size: 10px;">知识点积累</a>
+      <a href="/tags/C/" style="font-size: 20px;">C</a> <a href="/tags/JS/" style="font-size: 10px;">JS</a> <a href="/tags/OC/" style="font-size: 10px;">OC</a> <a href="/tags/小白鼠答疑系列/" style="font-size: 10px;">小白鼠答疑系列</a>
     </div>
   </div>
 
@@ -565,7 +548,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -577,23 +560,23 @@
       <ul>
         
           <li>
+            <a href="/2015/11/30/项目总结-scrollHeight-offsetHeight/">项目总结-scrollHeight &amp;&amp; offsetHeight</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/21/class-method-instance-method/">class method &amp;&amp; instance method</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/21/main-与-UIApplication/">main() 与 UIApplication</a>
+          </li>
+        
+          <li>
             <a href="/2015/11/16/Height-Width/">Height &amp;&amp; Width</a>
           </li>
         
           <li>
             <a href="/2015/11/16/load-vs-DOMContentLoaded/">load vs DOMContentLoaded</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/02/小白鼠答疑6-回调/">小白鼠答疑6 - 回调</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/02/小白鼠答疑5-预处理命令/">小白鼠答疑5 - 预处理命令</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/02/小白鼠答疑4-Collection/">小白鼠答疑4 - Collection类</a>
           </li>
         
       </ul>
