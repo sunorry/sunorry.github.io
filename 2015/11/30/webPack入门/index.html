@@ -3,24 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>小白鼠答疑4 - Collection类 | sunorry</title>
+  <title>webpack入门 | sunorry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="NSArray/NSMutableArray创建 NSArray 实例时，需要一次性设置好所有要保存的对象。1NSArray *color = [NSArray arrayWithObjects:@&quot;Orange&quot;, @&quot;red&quot;, nil];
-nil 实参必须写，以便让该方法知道要加入对象的个数，新版本是写 count。
-不可修改的对象(NSArray)永远无须拷贝。对于可修改对象，则可能要复制">
+  <meta name="description" content="webpack vs grunt
+里面有 how to use Make with JavaScript 可以看下，应该和普通的没差。
+webpack傻瓜式指南
+什么是 webpackwebpack is a module bundler.
+webpack takes modules with dependencies and generates static assets representin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小白鼠答疑4 - Collection类">
-<meta property="og:url" content="http://sunorry.github.io/2015/11/02/小白鼠答疑4-Collection/index.html">
+<meta property="og:title" content="webpack入门">
+<meta property="og:url" content="http://sunorry.github.io/2015/11/30/webPack入门/index.html">
 <meta property="og:site_name" content="sunorry">
-<meta property="og:description" content="NSArray/NSMutableArray创建 NSArray 实例时，需要一次性设置好所有要保存的对象。1NSArray *color = [NSArray arrayWithObjects:@&quot;Orange&quot;, @&quot;red&quot;, nil];
-nil 实参必须写，以便让该方法知道要加入对象的个数，新版本是写 count。
-不可修改的对象(NSArray)永远无须拷贝。对于可修改对象，则可能要复制">
-<meta property="og:updated_time" content="2015-11-02T03:24:05.000Z">
+<meta property="og:description" content="webpack vs grunt
+里面有 how to use Make with JavaScript 可以看下，应该和普通的没差。
+webpack傻瓜式指南
+什么是 webpackwebpack is a module bundler.
+webpack takes modules with dependencies and generates static assets representin">
+<meta property="og:updated_time" content="2015-11-30T09:05:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小白鼠答疑4 - Collection类">
-<meta name="twitter:description" content="NSArray/NSMutableArray创建 NSArray 实例时，需要一次性设置好所有要保存的对象。1NSArray *color = [NSArray arrayWithObjects:@&quot;Orange&quot;, @&quot;red&quot;, nil];
-nil 实参必须写，以便让该方法知道要加入对象的个数，新版本是写 count。
-不可修改的对象(NSArray)永远无须拷贝。对于可修改对象，则可能要复制">
+<meta name="twitter:title" content="webpack入门">
+<meta name="twitter:description" content="webpack vs grunt
+里面有 how to use Make with JavaScript 可以看下，应该和普通的没差。
+webpack傻瓜式指南
+什么是 webpackwebpack is a module bundler.
+webpack takes modules with dependencies and generates static assets representin">
   
     <link rel="alternative" href="/atom.xml" title="sunorry" type="application/atom+xml">
   
@@ -70,14 +76,14 @@ nil 实参必须写，以便让该方法知道要加入对象的个数，新版�
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-小白鼠答疑4-Collection" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-webPack入门" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/02/小白鼠答疑4-Collection/" class="article-date">
-  <time datetime="2015-11-02T03:08:00.000Z" itemprop="datePublished">2015-11-02</time>
+    <a href="/2015/11/30/webPack入门/" class="article-date">
+  <time datetime="2015-11-30T07:07:00.000Z" itemprop="datePublished">2015-11-30</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/OC/">OC</a>
+    <a class="article-category-link" href="/categories/Reactjs/">Reactjs</a>
   </div>
 
   </div>
@@ -88,7 +94,7 @@ nil 实参必须写，以便让该方法知道要加入对象的个数，新版�
         
   
     <h1 class="article-title" itemprop="name">
-      小白鼠答疑4 - Collection类
+      webpack入门
     </h1>
   
 
@@ -96,36 +102,46 @@ nil 实参必须写，以便让该方法知道要加入对象的个数，新版�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="NSArray/NSMutableArray">NSArray/NSMutableArray</h2><p>创建 <code>NSArray</code> 实例时，需要一次性设置好所有要保存的对象。<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSArray</span> *color = [<span class="built_in">NSArray</span> arrayWithObjects:<span class="string">@"Orange"</span>, <span class="string">@"red"</span>, <span class="literal">nil</span>];</span><br></pre></td></tr></table></figure></p>
-<p><code>nil</code> 实参必须写，以便让该方法知道要加入对象的个数，新版本是写 count。</p>
-<p>不可修改的对象(NSArray)永远无须拷贝。对于可修改对象，则可能要复制一份私有拷贝，以保证程序中的其他代码无法修改对象所保存的内容。不可修改对象则没有这样的顾虑。</p>
-<p>也就是说，NSArray 的 copy 不会做额外的工作，仅仅返回本身的指针。 NSMutableArray 的 copy 则会制作一份自己的拷贝，并返回指向新数组对象的指针。</p>
+        <p><a href="http://survivejs.com/webpack_react/webpack_compared/" target="_blank" rel="external">webpack vs grunt</a></p>
+<p>里面有 <a href="https://blog.jcoglan.com/2014/02/05/building-javascript-projects-with-make/" target="_blank" rel="external">how to use Make with JavaScript</a> 可以看下，应该和普通的没差。</p>
+<p><a href="http://zhuanlan.zhihu.com/FrontendMagazine/20367175" target="_blank" rel="external">webpack傻瓜式指南</a></p>
+<h2 id="什么是_webpack">什么是 webpack</h2><p>webpack is a module bundler.</p>
+<p>webpack takes modules with dependencies and generates static assets representing those modules. 他的目的就是把有依赖关系的各种文件打包成一系列的静态资源。</p>
+<p>简单来说，它就是一个配置文件，主要分为三部分：</p>
+<ul>
+<li>entry，入口文件</li>
+<li>output，处理后的文件放在哪里</li>
+<li>moudle 模块，要用什么不同的模块来处理各种类型的文件</li>
+</ul>
+<p> CommonJS和AMD是用于JavaScript模块管理的两大规范，前者定义的是模块的同步加载，主要用于NodeJS；而后者则是异步加载，通过requirejs等工具适用于前端。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/02/小白鼠答疑4-Collection/" data-id="cih8xb3v10006jf3auzxm4nd1" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/11/30/webPack入门/" data-id="cihn1736q0005vg3ah0pwt6km" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2015/11/02/小白鼠答疑5-预处理命令/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2015/12/07/正则中的-中-花-括号/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          小白鼠答疑5 - 预处理命令
+          正则中的[中|花]括号
         
       </div>
     </a>
   
   
-    <a href="/2015/11/01/小白鼠答疑-修饰符/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/11/30/项目总结-抓取键盘上的go/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">小白鼠答疑3 - 修饰符</div>
+      <div class="article-nav-title">项目总结-抓取键盘上的go</div>
     </a>
   
 </nav>
