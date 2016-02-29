@@ -5,25 +5,16 @@
   
   <title>mongo &amp; mongoose | sunorry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="校验不想在每次对数据库的操作（插入、更新、查询）都重复校验。
-Mongoose 通过允许在应用层定义 schema 来解决问题，它在保持文档灵活性和易改动的前提下，引入了特定的属性对齐做一定的学术，成为模型。
-原子性加入写了个 blog ，用 Express 和 MongoDB 。
-A 想编辑文档的标题，与此同时，B 想添加一个标签。他两同时传递一份完整的文档拷贝来进行更新操作，那么只会有一个人成">
+  <meta name="description" content="什么关系篇!">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mongo & mongoose">
 <meta property="og:url" content="http://sunorry.github.io/2016/02/29/mongo-mongoose/index.html">
 <meta property="og:site_name" content="sunorry">
-<meta property="og:description" content="校验不想在每次对数据库的操作（插入、更新、查询）都重复校验。
-Mongoose 通过允许在应用层定义 schema 来解决问题，它在保持文档灵活性和易改动的前提下，引入了特定的属性对齐做一定的学术，成为模型。
-原子性加入写了个 blog ，用 Express 和 MongoDB 。
-A 想编辑文档的标题，与此同时，B 想添加一个标签。他两同时传递一份完整的文档拷贝来进行更新操作，那么只会有一个人成">
-<meta property="og:updated_time" content="2016-02-29T06:09:49.000Z">
+<meta property="og:description" content="什么关系篇!">
+<meta property="og:updated_time" content="2016-02-29T06:12:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mongo & mongoose">
-<meta name="twitter:description" content="校验不想在每次对数据库的操作（插入、更新、查询）都重复校验。
-Mongoose 通过允许在应用层定义 schema 来解决问题，它在保持文档灵活性和易改动的前提下，引入了特定的属性对齐做一定的学术，成为模型。
-原子性加入写了个 blog ，用 Express 和 MongoDB 。
-A 想编辑文档的标题，与此同时，B 想添加一个标签。他两同时传递一份完整的文档拷贝来进行更新操作，那么只会有一个人成">
+<meta name="twitter:description" content="什么关系篇!">
   
     <link rel="alternative" href="/atom.xml" title="sunorry" type="application/atom+xml">
   
@@ -95,7 +86,8 @@ A 想编辑文档的标题，与此同时，B 想添加一个标签。他两同�
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="校验">校验</h2><p>不想在每次对数据库的操作（插入、更新、查询）都重复校验。</p>
+        <p>什么关系篇!<br><a id="more"></a></p>
+<h2 id="校验">校验</h2><p>不想在每次对数据库的操作（插入、更新、查询）都重复校验。</p>
 <p><code>Mongoose</code> 通过允许在应用层定义 <code>schema</code> 来解决问题，它在保持文档灵活性和易改动的前提下，引入了特定的属性对齐做一定的学术，成为模型。</p>
 <h2 id="原子性">原子性</h2><p>加入写了个 blog ，用 Express 和 MongoDB 。</p>
 <p>A 想编辑文档的标题，与此同时，B 想添加一个标签。他两同时传递一份完整的文档拷贝来进行更新操作，那么只会有一个人成功，另外一个无法对数据库操作失败。</p>
@@ -109,11 +101,12 @@ A 想编辑文档的标题，与此同时，B 想添加一个标签。他两同�
 <h2 id="简单的简介">简单的简介</h2><p>相比原声的驱动器，<code>Mongoose</code> 做的第一个简化就是<strong>它假定绝大部分的应用程序都是用一个数据库，这大大简化了使用方式</strong>。</p>
 <h3 id="连接数据库">连接数据库</h3><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mongoose.<span class="keyword">connect</span>(<span class="string">'mongodb://localhost/my_database'</span>);</span><br></pre></td></tr></table></figure>
 <p>另外，使用 <code>Mongoose</code> ，就无需关心链接是否真的已经建立了，因为，它会先把数据库操作指令缓存起来，在连接上数据库以后就会把这些操作发送给 <code>MongoDB</code>。<strong>这就意味着,我们无需监听 connection 的回调函数</strong>，连接后就可以直接开始查询数据库了。</p>
+<p>参考书籍：《了不起的Node.js》</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2016/02/29/mongo-mongoose/" data-id="cil7j0lq900007g3anq8vlx03" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2016/02/29/mongo-mongoose/" data-id="cil7l8px90027bo3aw6ex3vnd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/什么关系/">什么关系</a></li></ul>
