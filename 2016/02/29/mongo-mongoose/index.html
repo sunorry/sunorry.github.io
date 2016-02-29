@@ -3,30 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>webpack入门 | sunorry</title>
+  <title>mongo &amp; mongoose | sunorry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="webpack vs grunt
-里面有 how to use Make with JavaScript 可以看下，应该和普通的没差。
-webpack傻瓜式指南
-什么是 webpackwebpack is a module bundler.
-webpack takes modules with dependencies and generates static assets representin">
+  <meta name="description" content="校验不想在每次对数据库的操作（插入、更新、查询）都重复校验。
+Mongoose 通过允许在应用层定义 schema 来解决问题，它在保持文档灵活性和易改动的前提下，引入了特定的属性对齐做一定的学术，成为模型。
+原子性加入写了个 blog ，用 Express 和 MongoDB 。
+A 想编辑文档的标题，与此同时，B 想添加一个标签。他两同时传递一份完整的文档拷贝来进行更新操作，那么只会有一个人成">
 <meta property="og:type" content="article">
-<meta property="og:title" content="webpack入门">
-<meta property="og:url" content="http://sunorry.github.io/2015/11/30/webPack入门/index.html">
+<meta property="og:title" content="mongo & mongoose">
+<meta property="og:url" content="http://sunorry.github.io/2016/02/29/mongo-mongoose/index.html">
 <meta property="og:site_name" content="sunorry">
-<meta property="og:description" content="webpack vs grunt
-里面有 how to use Make with JavaScript 可以看下，应该和普通的没差。
-webpack傻瓜式指南
-什么是 webpackwebpack is a module bundler.
-webpack takes modules with dependencies and generates static assets representin">
-<meta property="og:updated_time" content="2015-11-30T09:05:27.000Z">
+<meta property="og:description" content="校验不想在每次对数据库的操作（插入、更新、查询）都重复校验。
+Mongoose 通过允许在应用层定义 schema 来解决问题，它在保持文档灵活性和易改动的前提下，引入了特定的属性对齐做一定的学术，成为模型。
+原子性加入写了个 blog ，用 Express 和 MongoDB 。
+A 想编辑文档的标题，与此同时，B 想添加一个标签。他两同时传递一份完整的文档拷贝来进行更新操作，那么只会有一个人成">
+<meta property="og:updated_time" content="2016-02-29T06:09:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="webpack入门">
-<meta name="twitter:description" content="webpack vs grunt
-里面有 how to use Make with JavaScript 可以看下，应该和普通的没差。
-webpack傻瓜式指南
-什么是 webpackwebpack is a module bundler.
-webpack takes modules with dependencies and generates static assets representin">
+<meta name="twitter:title" content="mongo & mongoose">
+<meta name="twitter:description" content="校验不想在每次对数据库的操作（插入、更新、查询）都重复校验。
+Mongoose 通过允许在应用层定义 schema 来解决问题，它在保持文档灵活性和易改动的前提下，引入了特定的属性对齐做一定的学术，成为模型。
+原子性加入写了个 blog ，用 Express 和 MongoDB 。
+A 想编辑文档的标题，与此同时，B 想添加一个标签。他两同时传递一份完整的文档拷贝来进行更新操作，那么只会有一个人成">
   
     <link rel="alternative" href="/atom.xml" title="sunorry" type="application/atom+xml">
   
@@ -76,16 +73,12 @@ webpack takes modules with dependencies and generates static assets representin"
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-webPack入门" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-mongo-mongoose" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/30/webPack入门/" class="article-date">
-  <time datetime="2015-11-30T07:07:00.000Z" itemprop="datePublished">2015-11-30</time>
+    <a href="/2016/02/29/mongo-mongoose/" class="article-date">
+  <time datetime="2016-02-29T05:09:00.000Z" itemprop="datePublished">2016-02-29</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Reactjs/">Reactjs</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -94,7 +87,7 @@ webpack takes modules with dependencies and generates static assets representin"
         
   
     <h1 class="article-title" itemprop="name">
-      webpack入门
+      mongo &amp; mongoose
     </h1>
   
 
@@ -102,26 +95,28 @@ webpack takes modules with dependencies and generates static assets representin"
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://survivejs.com/webpack_react/webpack_compared/" target="_blank" rel="external">webpack vs grunt</a></p>
-<p>里面有 <a href="https://blog.jcoglan.com/2014/02/05/building-javascript-projects-with-make/" target="_blank" rel="external">how to use Make with JavaScript</a> 可以看下，应该和普通的没差。</p>
-<p><a href="http://zhuanlan.zhihu.com/FrontendMagazine/20367175" target="_blank" rel="external">webpack傻瓜式指南</a></p>
-<h2 id="什么是_webpack">什么是 webpack</h2><p>webpack is a module bundler.</p>
-<p>webpack takes modules with dependencies and generates static assets representing those modules. 他的目的就是把有依赖关系的各种文件打包成一系列的静态资源。</p>
-<p>简单来说，它就是一个配置文件，主要分为三部分：</p>
-<ul>
-<li>entry，入口文件</li>
-<li>output，处理后的文件放在哪里</li>
-<li>moudle 模块，要用什么不同的模块来处理各种类型的文件</li>
-</ul>
-<p> CommonJS和AMD是用于JavaScript模块管理的两大规范，前者定义的是模块的同步加载，主要用于NodeJS；而后者则是异步加载，通过requirejs等工具适用于前端。</p>
+        <h2 id="校验">校验</h2><p>不想在每次对数据库的操作（插入、更新、查询）都重复校验。</p>
+<p><code>Mongoose</code> 通过允许在应用层定义 <code>schema</code> 来解决问题，它在保持文档灵活性和易改动的前提下，引入了特定的属性对齐做一定的学术，成为模型。</p>
+<h2 id="原子性">原子性</h2><p>加入写了个 blog ，用 Express 和 MongoDB 。</p>
+<p>A 想编辑文档的标题，与此同时，B 想添加一个标签。他两同时传递一份完整的文档拷贝来进行更新操作，那么只会有一个人成功，另外一个无法对数据库操作失败。</p>
+<p>要确保原子性，<code>MongoDB</code> 提供了 <code>$set</code> 和 <code>$push</code>操作符。</p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">db.blogposts.<span class="keyword">update</span>(&#123; _id: &lt;id&gt; &#125;, &#123; <span class="variable">$set</span>: &#123; title: <span class="string">'new Title'</span> &#125; &#125;);</span><br><span class="line">db.blogposts.<span class="keyword">update</span>(&#123; _id: &lt;id&gt; &#125;, &#123; tags: &#123; <span class="variable">$push</span>: <span class="string">'new Tag'</span> &#125; &#125;);</span><br></pre></td></tr></table></figure>
+<p><code>Mongoose</code> 则是通过检查要对文档做的修改，并只修改受影响的字段来解决这个问题。就算是操作的是数组（包括文档数组），原子性依然能够得到保证。</p>
+<h2 id="安全模式">安全模式</h2><p>使用数据库驱动器，操作文档时提供一个可以选的 <code>options</code> 参数：<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">app.users.<span class="keyword">insert</span>( &#123;&#125;, &#123; &lt;options&gt; &#125; );</span><br></pre></td></tr></table></figure></p>
+<p>有一个参数 <code>safe</code>，它会对数据库进行修改时启动安全模式。</p>
+<p>默认情况下，在操作完成后，如果有错误发生，<code>MongoDB</code>不会及时通知你。驱动器需要在操作完成后进行一个特殊的函数调用 <code>db.getLastError</code>，来验证数据修改是否成功。</p>
+<p><code>Mongoose</code> 默认会对所有操作启用安全模式。</p>
+<h2 id="简单的简介">简单的简介</h2><p>相比原声的驱动器，<code>Mongoose</code> 做的第一个简化就是<strong>它假定绝大部分的应用程序都是用一个数据库，这大大简化了使用方式</strong>。</p>
+<h3 id="连接数据库">连接数据库</h3><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mongoose.<span class="keyword">connect</span>(<span class="string">'mongodb://localhost/my_database'</span>);</span><br></pre></td></tr></table></figure>
+<p>另外，使用 <code>Mongoose</code> ，就无需关心链接是否真的已经建立了，因为，它会先把数据库操作指令缓存起来，在连接上数据库以后就会把这些操作发送给 <code>MongoDB</code>。<strong>这就意味着,我们无需监听 connection 的回调函数</strong>，连接后就可以直接开始查询数据库了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/30/webPack入门/" data-id="cihzn7vlw000tse3admwxotz1" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2016/02/29/mongo-mongoose/" data-id="cil7j0lq900007g3anq8vlx03" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/什么关系/">什么关系</a></li></ul>
 
     </footer>
   </div>
@@ -129,19 +124,10 @@ webpack takes modules with dependencies and generates static assets representin"
     
 <nav id="article-nav">
   
-    <a href="/2015/12/07/正则中的-中-花-括号/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          正则中的[中|花]括号
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/11/30/项目总结-抓取键盘上的go/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/12/10/随手复习/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">项目总结-抓取键盘上的go</div>
+      <div class="article-nav-title">随手复习</div>
     </a>
   
 </nav>
