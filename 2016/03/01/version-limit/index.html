@@ -3,20 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>项目总结-scrollHeight &amp;&amp; offsetHeight | sunorry</title>
+  <title>version limit | sunorry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="bnbhybrid 的评论页面。">
+  <meta name="description" content="版本号的限制，老是忘了，复习一次吧。
+12&quot;grunt-contrib-copy&quot; : &quot;^0.7.3&quot;&quot;grunt&quot; : &quot;~0.4.1&quot;
+^ 是一种标宽松的限制，只限制主版本号，如上面的，只要 0 不变，install 时就会不断更新；~ 是最小版本号才会更新。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="项目总结-scrollHeight && offsetHeight">
-<meta property="og:url" content="http://sunorry.github.io/2015/11/30/项目总结-scrollHeight-offsetHeight/index.html">
+<meta property="og:title" content="version limit">
+<meta property="og:url" content="http://sunorry.github.io/2016/03/01/version-limit/index.html">
 <meta property="og:site_name" content="sunorry">
-<meta property="og:description" content="bnbhybrid 的评论页面。">
-<meta property="og:image" content="https://mdn.mozillademos.org/files/347/Dimensions-offset.png">
-<meta property="og:image" content="https://mdn.mozillademos.org/files/672/scrollHeight.png">
-<meta property="og:updated_time" content="2015-11-30T03:42:20.000Z">
+<meta property="og:description" content="版本号的限制，老是忘了，复习一次吧。
+12&quot;grunt-contrib-copy&quot; : &quot;^0.7.3&quot;&quot;grunt&quot; : &quot;~0.4.1&quot;
+^ 是一种标宽松的限制，只限制主版本号，如上面的，只要 0 不变，install 时就会不断更新；~ 是最小版本号才会更新。">
+<meta property="og:updated_time" content="2016-03-01T03:22:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="项目总结-scrollHeight && offsetHeight">
-<meta name="twitter:description" content="bnbhybrid 的评论页面。">
+<meta name="twitter:title" content="version limit">
+<meta name="twitter:description" content="版本号的限制，老是忘了，复习一次吧。
+12&quot;grunt-contrib-copy&quot; : &quot;^0.7.3&quot;&quot;grunt&quot; : &quot;~0.4.1&quot;
+^ 是一种标宽松的限制，只限制主版本号，如上面的，只要 0 不变，install 时就会不断更新；~ 是最小版本号才会更新。">
   
     <link rel="alternative" href="/atom.xml" title="sunorry" type="application/atom+xml">
   
@@ -66,14 +70,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-项目总结-scrollHeight-offsetHeight" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-version-limit" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/30/项目总结-scrollHeight-offsetHeight/" class="article-date">
-  <time datetime="2015-11-30T03:13:00.000Z" itemprop="datePublished">2015-11-30</time>
+    <a href="/2016/03/01/version-limit/" class="article-date">
+  <time datetime="2016-03-01T03:22:00.000Z" itemprop="datePublished">2016-03-01</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/项目总结/">项目总结</a>
+    <a class="article-category-link" href="/categories/温故知新/">温故知新</a>
   </div>
 
   </div>
@@ -84,7 +88,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      项目总结-scrollHeight &amp;&amp; offsetHeight
+      version limit
     </h1>
   
 
@@ -92,22 +96,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>bnbhybrid 的评论页面。<br><a id="more"></a></p>
-<p><code>ul</code> 设置了 <code>max-height</code>、<code>min-height</code>、<code>overflow</code>。</p>
-<p>效果：当内容超过 <code>ul</code> 的最高高度时，显示 <strong>fold</strong> 按钮，设置 <code>min-height</code> 是防止只有一行的情况。</p>
-<p>如何知道内容超过了 <code>max-height</code> 呢。</p>
-<h2 id="offsetHeight_readonly">offsetHeight <code>readonly</code></h2><p>一图顶千言。包括 <code>padding</code> , <code>border</code>。</p>
-<p><strong>offsetWidth 包括了滚动条的宽度。</strong> </p>
-<p><img src="https://mdn.mozillademos.org/files/347/Dimensions-offset.png" alt="offsetHeight"></p>
-<h2 id="scrollHeight_readonly">scrollHeight <code>readonly</code></h2><p>高度包括了不可见的部分。</p>
-<p>高度不包含<code>margin</code> ，包括 <code>padding</code>, <code>border</code> 不清楚。</p>
-<p><img src="https://mdn.mozillademos.org/files/672/scrollHeight.png" alt="scrollHeight"></p>
-<p>所以只需用判断 <code>offsetHeight == scrollHeight</code> 即可。</p>
+        <p>版本号的限制，老是忘了，复习一次吧。</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"grunt-contrib-copy"</span> : <span class="string">"^0.7.3"</span></span><br><span class="line"><span class="string">"grunt"</span> : <span class="string">"~0.4.1"</span></span><br></pre></td></tr></table></figure>
+<p><code>^</code> 是一种标宽松的限制，只限制主版本号，如上面的，只要 0 不变，<code>install</code> 时就会不断更新；<br><code>~</code> 是最小版本号才会更新。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/30/项目总结-scrollHeight-offsetHeight/" data-id="cil8ul3ib0004u23a7k7z21mx" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2016/03/01/version-limit/" data-id="cil8um07k0000xu3a81ehf539" class="article-share-link">Share</a>
       
       
     </footer>
@@ -116,19 +112,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/11/30/项目总结-抓取键盘上的go/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          项目总结-抓取键盘上的go
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/11/21/class-method-instance-method/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/02/29/DOM-复习/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">class method &amp;&amp; instance method</div>
+      <div class="article-nav-title">DOM 复习</div>
     </a>
   
 </nav>
