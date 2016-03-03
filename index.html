@@ -65,6 +65,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-domain-cookie" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/03/03/domain-cookie/" class="article-date">
+  <time datetime="2016-03-03T03:24:49.000Z" itemprop="datePublished">2016-03-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/03/domain-cookie/">domain-cookie</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p><code>domain</code> 表示的是 <code>cookie</code> 所在的域，默认为请求的地址，如网址为 <code>www.qunar.com/xxx</code>，那么 <code>domain</code> 默认为<code>www.qunarc.com</code> 。而跨域访问，如域 A 为 <code>bnb.qunar.com</code>，域 B 为 <code>hotel.qunar.com</code>，那么在域 A 生产一个令域 A 和域 B 都能访问的 <code>cookie</code> 就要将该 <code>cookie</code> 的 <code>domain</code> 设置为 <code>.qunar.com</code> ；如果要在域 A 生产一个令域 A 不能访问而域 B 能访问的 <code>cookie</code> 就要将该 <code>cookie</code> 的 <code>domain</code> 设置为 <code>hotel.qunar.com</code>。</p>
+</li>
+<li><p><code>path</code> 表示 <code>cookie</code> 所在的目录，<code>qunar.com</code> 默认为 <code>/</code> ，就是根目录。在同一个服务器上有目录如下：<code>/test/</code>, <code>/test/cd/</code> , <code>/test/dd/</code>，现设一个 <code>cookie1</code> 的 <code>path</code> 为 <code>/test/</code>，<code>cookie2</code> 的 <code>path</code> 为 <code>/test/cd/</code>，那么 <code>test</code> 下的所有页面都可以访问到 <code>cookie1</code>，而 <code>/test/</code> 和 <code>/test/dd/</code> 的子页面不能访问 <code>cookie2</code>。这是因为 <code>cookie</code> 能让其 <code>path</code> 路径下的页面访问。</p>
+</li>
+<li><p>浏览器会将 <code>domain</code> 和 <code>path</code> 都相同的 <code>cookie</code> 保存在一个文件里，<code>cookie</code> 间用 <code>*</code> 隔开。</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://sunorry.github.io/2016/03/03/domain-cookie/" data-id="cilbpkyex002n2k3angs2zye8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-PVUV" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/03/02/PVUV/" class="article-date">
@@ -100,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2016/03/02/PVUV/" data-id="cilaqxnb9002k283aji2jvph9" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2016/03/02/PVUV/" data-id="cilbpkfkd001n2k3ac7agn7ao" class="article-share-link">Share</a>
       
       
     </footer>
@@ -141,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2016/03/02/早起文章总结/" data-id="cilaqx62c000c283aenfhilos" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2016/03/02/早起文章总结/" data-id="cilbpkfjg000c2k3aey9i8yh0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -185,7 +229,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2016/03/02/usr-bin-env/" data-id="cilaqx62z0015283ap3fhtplx" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2016/03/02/usr-bin-env/" data-id="cilbpkfk200152k3aaf0hchvd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basic/">basic</a></li></ul>
@@ -230,7 +274,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2016/03/01/version-limit/" data-id="cilaqx62x0012283ao1pm52gn" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2016/03/01/version-limit/" data-id="cilbpkfk000122k3auxyjaucc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -275,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2016/02/29/DOM-复习/" data-id="cilaqx63h001u283anfl48yrl" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2016/02/29/DOM-复习/" data-id="cilbpkfkk001x2k3a2znhq0u8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/basicFE/">basicFE</a></li></ul>
@@ -318,7 +362,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2016/02/29/mongo-mongoose/" data-id="cilaqx630001a283a14g47ued" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2016/02/29/mongo-mongoose/" data-id="cilbpkfk4001a2k3a91oj4d9l" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/什么关系/">什么关系</a></li></ul>
@@ -368,7 +412,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/12/10/随手复习/" data-id="cilaqx6270006283axz2em3xt" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/12/10/随手复习/" data-id="cilbpkfjc00062k3a4zp5tu1l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -413,7 +457,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/12/07/正则中的-中-花-括号/" data-id="cilaqx6290009283azhrvxyyw" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/12/07/正则中的-中-花-括号/" data-id="cilbpkfje00092k3acl3khlho" class="article-share-link">Share</a>
       
       
     </footer>
@@ -465,56 +509,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/30/webPack入门/" data-id="cilaqx62v000x283av8okdo3v" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2015/11/30/webPack入门/" data-id="cilbpkfjy000x2k3aj9jrregu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/webpack/">webpack</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-项目总结-抓取键盘上的go" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/30/项目总结-抓取键盘上的go/" class="article-date">
-  <time datetime="2015-11-30T03:45:00.000Z" itemprop="datePublished">2015-11-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/项目总结/">项目总结</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/30/项目总结-抓取键盘上的go/">项目总结-抓取键盘上的go</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>客栈关键字搜索页面<br>
-        
-          <p class="article-more-link">
-            <a href="/2015/11/30/项目总结-抓取键盘上的go/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/30/项目总结-抓取键盘上的go/" data-id="cilaqx61v0001283azszp17ca" class="article-share-link">Share</a>
-      
-      
     </footer>
   </div>
   
@@ -562,7 +561,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">8</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">October 2015</a><span class="archive-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -572,6 +571,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/03/03/domain-cookie/">domain-cookie</a>
+          </li>
         
           <li>
             <a href="/2016/03/02/PVUV/">PVUV</a>
@@ -587,10 +590,6 @@
         
           <li>
             <a href="/2016/03/01/version-limit/">version limit</a>
-          </li>
-        
-          <li>
-            <a href="/2016/02/29/DOM-复习/">DOM 复习</a>
           </li>
         
       </ul>

@@ -3,21 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>class method &amp;&amp; instance method | sunorry</title>
+  <title>domain-cookie | sunorry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="类方法(class method): 作用通常是创建对象，或者获取类的某些全局属性。类方法不会作用在对象上，也不能存取实例变量。
-实例方法(instance method): 用来操作对象（对象有时也称为类的一个实例），例如存取方法都是实例方法，用来设置和获取对象的实例变量。">
+  <meta name="description" content="domain 表示的是 cookie 所在的域，默认为请求的地址，如网址为 www.qunar.com/xxx，那么 domain 默认为www.qunarc.com 。而跨域访问，如域 A 为 bnb.qunar.com，域 B 为 hotel.qunar.com，那么在域 A 生产一个令域 A 和域 B 都能访问的 cookie 就要将该 cookie 的 domain 设置为 .qunar.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="class method && instance method">
-<meta property="og:url" content="http://sunorry.github.io/2015/11/21/class-method-instance-method/index.html">
+<meta property="og:title" content="domain-cookie">
+<meta property="og:url" content="http://sunorry.github.io/2016/03/03/domain-cookie/index.html">
 <meta property="og:site_name" content="sunorry">
-<meta property="og:description" content="类方法(class method): 作用通常是创建对象，或者获取类的某些全局属性。类方法不会作用在对象上，也不能存取实例变量。
-实例方法(instance method): 用来操作对象（对象有时也称为类的一个实例），例如存取方法都是实例方法，用来设置和获取对象的实例变量。">
-<meta property="og:updated_time" content="2015-11-21T15:02:38.000Z">
+<meta property="og:description" content="domain 表示的是 cookie 所在的域，默认为请求的地址，如网址为 www.qunar.com/xxx，那么 domain 默认为www.qunarc.com 。而跨域访问，如域 A 为 bnb.qunar.com，域 B 为 hotel.qunar.com，那么在域 A 生产一个令域 A 和域 B 都能访问的 cookie 就要将该 cookie 的 domain 设置为 .qunar.">
+<meta property="og:updated_time" content="2016-03-03T03:25:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="class method && instance method">
-<meta name="twitter:description" content="类方法(class method): 作用通常是创建对象，或者获取类的某些全局属性。类方法不会作用在对象上，也不能存取实例变量。
-实例方法(instance method): 用来操作对象（对象有时也称为类的一个实例），例如存取方法都是实例方法，用来设置和获取对象的实例变量。">
+<meta name="twitter:title" content="domain-cookie">
+<meta name="twitter:description" content="domain 表示的是 cookie 所在的域，默认为请求的地址，如网址为 www.qunar.com/xxx，那么 domain 默认为www.qunarc.com 。而跨域访问，如域 A 为 bnb.qunar.com，域 B 为 hotel.qunar.com，那么在域 A 生产一个令域 A 和域 B 都能访问的 cookie 就要将该 cookie 的 domain 设置为 .qunar.">
   
     <link rel="alternative" href="/atom.xml" title="sunorry" type="application/atom+xml">
   
@@ -67,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-class-method-instance-method" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-domain-cookie" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2015/11/21/class-method-instance-method/" class="article-date">
-  <time datetime="2015-11-21T14:57:51.000Z" itemprop="datePublished">2015-11-21</time>
+    <a href="/2016/03/03/domain-cookie/" class="article-date">
+  <time datetime="2016-03-03T03:24:49.000Z" itemprop="datePublished">2016-03-03</time>
 </a>
     
   </div>
@@ -81,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      class method &amp;&amp; instance method
+      domain-cookie
     </h1>
   
 
@@ -89,13 +86,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>类方法(class method): 作用通常是创建对象，或者获取类的某些全局属性。类方法不会作用在对象上，也不能存取实例变量。</p>
-<p>实例方法(instance method): 用来操作对象（对象有时也称为类的一个实例），例如存取方法都是实例方法，用来设置和获取对象的实例变量。</p>
+        <ol>
+<li><p><code>domain</code> 表示的是 <code>cookie</code> 所在的域，默认为请求的地址，如网址为 <code>www.qunar.com/xxx</code>，那么 <code>domain</code> 默认为<code>www.qunarc.com</code> 。而跨域访问，如域 A 为 <code>bnb.qunar.com</code>，域 B 为 <code>hotel.qunar.com</code>，那么在域 A 生产一个令域 A 和域 B 都能访问的 <code>cookie</code> 就要将该 <code>cookie</code> 的 <code>domain</code> 设置为 <code>.qunar.com</code> ；如果要在域 A 生产一个令域 A 不能访问而域 B 能访问的 <code>cookie</code> 就要将该 <code>cookie</code> 的 <code>domain</code> 设置为 <code>hotel.qunar.com</code>。</p>
+</li>
+<li><p><code>path</code> 表示 <code>cookie</code> 所在的目录，<code>qunar.com</code> 默认为 <code>/</code> ，就是根目录。在同一个服务器上有目录如下：<code>/test/</code>, <code>/test/cd/</code> , <code>/test/dd/</code>，现设一个 <code>cookie1</code> 的 <code>path</code> 为 <code>/test/</code>，<code>cookie2</code> 的 <code>path</code> 为 <code>/test/cd/</code>，那么 <code>test</code> 下的所有页面都可以访问到 <code>cookie1</code>，而 <code>/test/</code> 和 <code>/test/dd/</code> 的子页面不能访问 <code>cookie2</code>。这是因为 <code>cookie</code> 能让其 <code>path</code> 路径下的页面访问。</p>
+</li>
+<li><p>浏览器会将 <code>domain</code> 和 <code>path</code> 都相同的 <code>cookie</code> 保存在一个文件里，<code>cookie</code> 间用 <code>*</code> 隔开。</p>
+</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2015/11/21/class-method-instance-method/" data-id="cilbpkfka001h2k3a3c0yfv20" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2016/03/03/domain-cookie/" data-id="cilbpkyex002n2k3angs2zye8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -104,19 +107,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/11/30/项目总结-scrollHeight-offsetHeight/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          项目总结-scrollHeight &amp;&amp; offsetHeight
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/11/21/main-与-UIApplication/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/03/02/PVUV/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">main() 与 UIApplication</div>
+      <div class="article-nav-title">PVUV</div>
     </a>
   
 </nav>
