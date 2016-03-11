@@ -5,16 +5,16 @@
   
   <title>jsonp | sunorry</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JSONP 简单原理">
+  <meta name="description" content="实现 jsonp">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jsonp">
-<meta property="og:url" content="http://sunorry.github.io/2016/03/09/jsonp/index.html">
+<meta property="og:url" content="http://sunorry.github.io/2016/03/11/jsonp/index.html">
 <meta property="og:site_name" content="sunorry">
-<meta property="og:description" content="JSONP 简单原理">
-<meta property="og:updated_time" content="2016-03-09T11:54:20.000Z">
+<meta property="og:description" content="实现 jsonp">
+<meta property="og:updated_time" content="2016-03-11T09:12:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jsonp">
-<meta name="twitter:description" content="JSONP 简单原理">
+<meta name="twitter:description" content="实现 jsonp">
   
     <link rel="alternative" href="/atom.xml" title="sunorry" type="application/atom+xml">
   
@@ -66,10 +66,14 @@
       <div class="outer">
         <section id="main"><article id="post-jsonp" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/03/09/jsonp/" class="article-date">
-  <time datetime="2016-03-09T11:54:02.000Z" itemprop="datePublished">2016-03-09</time>
+    <a href="/2016/03/11/jsonp/" class="article-date">
+  <time datetime="2016-03-11T09:12:00.000Z" itemprop="datePublished">2016-03-11</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/basic/">basic</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -86,24 +90,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>JSONP 简单原理</p>
-<a id="more"></a>
+        <p>实现 jsonp<br><a id="more"></a></p>
+<p><a href="https://github.com/sunorry/basicsFE/blob/master/jsonp.js" target="_blank" rel="external">github</a></p>
+<p>原理很简单，说说注意的点吧。</p>
 <ol>
-<li>凡是拥有 <code>src</code> 属性的都能跨域，比如 <code>&lt;script&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;iframe&gt;</code>;</li>
-<li>服务器生成 js ，前端来调用（不太确切，看例子）</li>
+<li>callbackName 的处理</li>
 </ol>
-<p>例一：</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">远程服务器是有一段脚本</span><br><span class="line">a.js</span><br><span class="line">consol.<span class="command">log</span>(<span class="number">123</span>);</span><br><span class="line"></span><br><span class="line">前端页面：</span><br><span class="line">&lt;<span class="keyword">script</span> src=<span class="string">"xx.com/a.js"</span>&gt;</span><br></pre></td></tr></table></figure>
-<p>例二：</p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">前端：</span><br><span class="line"><span class="keyword">var</span> <span class="keyword">callback</span> = <span class="function"><span class="keyword">function</span><span class="params">(data)</span> </span>&#123;</span><br><span class="line">	console.log(data);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">远程服务器：</span><br><span class="line"><span class="keyword">callback</span>(<span class="number">123</span>);</span><br></pre></td></tr></table></figure>
-<p>例三：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">指定服务器返回的 cbName</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">haha</span>(<span class="params">data</span>) </span>&#123; </span><br><span class="line">	<span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> url = <span class="string">'remote.com?callback=haha'</span>;</span><br><span class="line"><span class="keyword">var</span> script = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">script.setAttribute(<span class="string">'src'</span>, url);</span><br><span class="line">docuemnt.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>].appendChild(script); </span><br><span class="line"></span><br><span class="line"><span class="comment">// 服务器端那边返回</span></span><br><span class="line">haha(<span class="number">123</span>);</span><br></pre></td></tr></table></figure>
-<p>jQuery 只是请求 jsonp 和 ajax 很像，其实是两个东西。<br>ajax 是通过 xmlhttprequest 来获取内容，而 jsonp 是动态添加 <code>&lt;script&gt;</code> 标签来调用服务器脚本。</p>
-
+<p>第一种是，在函数下 <code>jsonp[&#39;cb1&#39;]</code> ，<code>url</code> 上就是 <code>xxx?callback=jsonp.cb1</code>; 很巧妙</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">JSONP[cbName] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		cb(data)</span><br><span class="line">	&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">		<span class="keyword">delete</span> JSONP[cbName];</span><br><span class="line">		<span class="built_in">document</span>.body.removeChild(script)	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>query 处理</li>
+</ol>
+<p>把 <code>query</code> 放到 <code>url</code> 后面的时候，一定要 <code>encodeURIComponent</code>, <code>for in</code> 循环也要 <code>hasOwnProperty</code>.</p>
+<p>当然也有其他处理方法，譬如 <code>Object.keys</code></p>
+<p><code>for of</code>循环。</p>
+<p><strong>for-of</strong></p>
+<ol>
+<li>for-of 直接是为 array 定制的, k 也是数字，不会像 for-in 是字符串</li>
+<li>相比 <code>forEach</code> 支持 <code>break</code>、<code>continue</code> 和 <code>return</code></li>
+<li>（expando）元素不会遍历到，arr.name = 213; 在 for-in 是能遍历到的</li>
+</ol>
+<p>几个比较好的习惯</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 如果 url 后面有了 ？ 先干掉，在加上</span></span><br><span class="line"><span class="keyword">let</span> url = url.trim().replace(<span class="regexp">/\?$/</span>, <span class="string">''</span>) + <span class="string">'?'</span></span><br><span class="line"><span class="comment">// try 执行，最后干掉对象里的回调还有 script </span></span><br><span class="line">JSONP[cbName] = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		cb(data)</span><br><span class="line">	&#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">		<span class="keyword">delete</span> JSONP[cbName];</span><br><span class="line">		<span class="built_in">document</span>.body.removeChild(script)	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 拿随机字符串</span></span><br><span class="line"><span class="built_in">Math</span>.random().toString(<span class="number">32</span>).substr(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://sunorry.github.io/2016/03/09/jsonp/" data-id="cilksfjb5002ulp3abpfiyo8c" class="article-share-link">Share</a>
+      <a data-url="http://sunorry.github.io/2016/03/11/jsonp/" data-id="cilnhitc3001hhf3adjcygl8r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -131,7 +143,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS/">JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OC/">OC</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reactjs/">Reactjs</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/basic/">basic</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/js/">js</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/node/">node</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/业务知识/">业务知识</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/温故知新/">温故知新</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目总结/">项目总结</a><span class="category-list-count">2</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C/">C</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/JS/">JS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/OC/">OC</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Reactjs/">Reactjs</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/basic/">basic</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/iOS/">iOS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/js/">js</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/node/">node</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/业务知识/">业务知识</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/温故知新/">温故知新</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/项目总结/">项目总结</a><span class="category-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -170,7 +182,7 @@
       <ul>
         
           <li>
-            <a href="/2016/03/09/jsonp/">jsonp</a>
+            <a href="/2016/03/11/jsonp/">jsonp</a>
           </li>
         
           <li>
